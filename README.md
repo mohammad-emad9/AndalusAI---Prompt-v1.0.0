@@ -15,6 +15,12 @@
 
 ---
 
+### 📸 Screenshot
+
+<img src="screenshots/screenshot.png" alt="AndalusAI - Prompt Screenshot" width="400"/>
+
+---
+
 </div>
 
 ## 📖 About
