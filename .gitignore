@@ -1,0 +1,5 @@
+# Ignore all source code - keep private
+prompt-engineering-assistant/
+
+# Keep README visible
+!README.md

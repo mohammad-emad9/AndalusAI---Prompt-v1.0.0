@@ -1,147 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AndalusAI - Prompt</title>
-  <link rel="stylesheet" href="style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <div class="container">
-    <!-- الهيدر -->
-    <header class="header">
-      <div class="logo">
-        <span class="logo-icon">🤖</span>
-        <h1 class="logo-text">AndalusAI</h1>
-      </div>
-      <div class="header-actions">
-        <button class="icon-btn" id="historyBtn" title="السجل">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12,6 12,12 16,14"></polyline>
-          </svg>
-        </button>
-        <button class="icon-btn" id="settingsBtn" title="الإعدادات">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path
-              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-            </path>
-          </svg>
-        </button>
-      </div>
-    </header>
-
-    <!-- شريط البحث -->
-    <div class="search-box">
-      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-      <input type="text" id="searchInput" placeholder="ابحث في البرومبتات...">
-    </div>
-
-    <!-- التصنيفات -->
-    <div class="categories">
-      <button class="category-btn active" data-category="all">الكل</button>
-      <button class="category-btn" data-category="general">عام</button>
-      <button class="category-btn" data-category="coding">برمجة</button>
-      <button class="category-btn" data-category="writing">كتابة</button>
-      <button class="category-btn" data-category="analysis">تحليل</button>
-      <button class="category-btn" data-category="creative">إبداعي</button>
-    </div>
-
-    <!-- منطقة إدخال البرومبت -->
-    <div class="prompt-input-area">
-      <textarea id="promptInput" placeholder="اكتب البرومبت هنا أو اختر من القوالب..."></textarea>
-      <div class="input-actions">
-        <button class="action-btn" id="clearBtn" title="مسح">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-        <button class="action-btn" id="improveBtn" title="تحسين">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-          </svg>
-        </button>
-        <button class="action-btn primary" id="copyBtn" title="نسخ">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          نسخ
-        </button>
-      </div>
-    </div>
-
-    <!-- قائمة القوالب -->
-    <div class="templates-section">
-      <div class="section-header">
-        <h2>📝 القوالب الجاهزة</h2>
-        <button class="add-btn" id="addTemplateBtn">+ إضافة</button>
-      </div>
-      <div class="templates-list" id="templatesList">
-        <!-- سيتم ملؤها بواسطة JavaScript -->
-      </div>
-    </div>
-
-    <!-- المفضلة -->
-    <div class="favorites-section" id="favoritesSection">
-      <div class="section-header">
-        <h2>⭐ المفضلة</h2>
-      </div>
-      <div class="favorites-list" id="favoritesList">
-        <!-- سيتم ملؤها بواسطة JavaScript -->
-      </div>
-    </div>
-  </div>
-
-  <!-- نافذة إضافة قالب -->
-  <div class="modal" id="addTemplateModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>إضافة قالب جديد</h3>
-        <button class="modal-close" id="closeModalBtn">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label for="templateTitle">عنوان القالب</label>
-          <input type="text" id="templateTitle" placeholder="مثال: تحليل نص">
-        </div>
-        <div class="form-group">
-          <label for="templateCategory">التصنيف</label>
-          <select id="templateCategory">
-            <option value="general">عام</option>
-            <option value="coding">برمجة</option>
-            <option value="writing">كتابة</option>
-            <option value="analysis">تحليل</option>
-            <option value="creative">إبداعي</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="templateText">نص البرومبت</label>
-          <textarea id="templateText" rows="5" placeholder="اكتب البرومبت هنا..."></textarea>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" id="cancelTemplateBtn">إلغاء</button>
-        <button class="btn btn-primary" id="saveTemplateBtn">حفظ</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- إشعار -->
-  <div class="toast" id="toast"></div>
-
-  <script src="script.js"></script>
-</body>
-
-</html>
