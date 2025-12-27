@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعدادات - AndalusAI Prompt</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">⚙️</span>
+                <h1>الإعدادات</h1>
+            </div>
+        </header>
+
+        <main class="settings-content">
+            <!-- إعدادات اللغة -->
+            <section class="settings-section">
+                <h2 class="section-title">🌍 اللغة</h2>
+                <div class="setting-item">
+                    <label for="language">لغة الواجهة</label>
+                    <select id="language">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- إعدادات المظهر -->
+            <section class="settings-section">
+                <h2 class="section-title">🎨 المظهر</h2>
+                <div class="setting-item">
+                    <label for="theme">السمة</label>
+                    <select id="theme">
+                        <option value="dark">داكن</option>
+                        <option value="light">فاتح</option>
+                        <option value="auto">تلقائي</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- إعدادات عامة -->
+            <section class="settings-section">
+                <h2 class="section-title">📋 عام</h2>
+                <div class="setting-item toggle">
+                    <label for="autoSave">حفظ تلقائي</label>
+                    <input type="checkbox" id="autoSave" checked>
+                </div>
+                <div class="setting-item toggle">
+                    <label for="notifications">الإشعارات</label>
+                    <input type="checkbox" id="notifications" checked>
+                </div>
+            </section>
+
+            <!-- إعدادات الذكاء الاصطناعي -->
+            <section class="settings-section ai-section">
+                <h2 class="section-title">🤖 الذكاء الاصطناعي</h2>
+                <div class="setting-item toggle">
+                    <label for="useAI">تفعيل التحسين بالذكاء الاصطناعي</label>
+                    <input type="checkbox" id="useAI" checked>
+                </div>
+                <div class="setting-item">
+                    <label for="apiKey">مفتاح Gemini API</label>
+                    <input type="password" id="apiKey" placeholder="AIzaSy..." class="api-input">
+                    <button class="btn-icon toggle-password" id="togglePassword" title="إظهار/إخفاء">👁</button>
+                </div>
+                <p class="setting-hint">احصل على مفتاح API من <a href="https://aistudio.google.com/apikey"
+                        target="_blank">Google AI Studio</a></p>
+            </section>
+
+            <!-- اختصارات لوحة المفاتيح -->
+            <section class="settings-section">
+                <h2 class="section-title">⌨️ الاختصارات</h2>
+                <div class="setting-item">
+                    <label>فتح النافذة</label>
+                    <span class="shortcut-key">Ctrl+Shift+P</span>
+                </div>
+                <div class="setting-item">
+                    <label>إدراج سريع</label>
+                    <span class="shortcut-key">Ctrl+Shift+I</span>
+                </div>
+            </section>
+
+            <!-- إدارة البيانات -->
+            <section class="settings-section">
+                <h2 class="section-title">💾 البيانات</h2>
+                <div class="setting-actions">
+                    <button class="btn btn-secondary" id="exportBtn">📤 تصدير</button>
+                    <button class="btn btn-secondary" id="importBtn">📥 استيراد</button>
+                    <button class="btn btn-danger" id="clearBtn">🗑️ مسح الكل</button>
+                </div>
+            </section>
+
+            <!-- حول -->
+            <section class="settings-section about">
+                <h2 class="section-title">ℹ️ حول</h2>
+                <p>AndalusAI - Prompt v1.0.0</p>
+                <p class="muted">أندلس AI - مساعدك الذكي للبرومبتات</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <button class="btn btn-primary" id="saveBtn">💾 حفظ الإعدادات</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
