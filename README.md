@@ -249,6 +249,48 @@ cd AndalusAI-Prompt
 
 ---
 
+## 🗺️ Roadmap & Future Improvements
+
+We're continuously working to improve AndalusAI - Prompt. Here's what's coming:
+
+### 🔐 Security & Privacy Enhancements
+
+| Improvement | Description |
+|-------------|-------------|
+| **First-run Privacy Notice** | Display a clear message: *"Your data never leaves your device — all processing is done locally"* |
+| **Permissions Transparency** | Detailed explanations in `manifest.json` for permissions like `clipboardRead` and why they're needed |
+| **Privacy Policy Page** | Dedicated page explaining data handling for sensitive prompts |
+
+### 🦊 Firefox Compatibility
+
+| Improvement | Description |
+|-------------|-------------|
+| **Cross-browser APIs** | Support for `browser.*` APIs alongside `chrome.*` for full Firefox compatibility |
+| **API Compatibility Check** | Avoid Chrome-only APIs like `chrome.scripting` where alternatives exist |
+| **Firefox Add-ons Store** | Official listing on Firefox Add-ons marketplace |
+
+### 🛠️ Developer Experience
+
+| Improvement | Description |
+|-------------|-------------|
+| **Version Management** | Proper `package.json` with semantic versioning (`"version": "1.0.0"`) |
+| **Git Tags** | Release tags for version tracking (e.g., `git tag v1.0.0`) |
+| **CONTRIBUTING.md** | Comprehensive contribution guidelines |
+| **Enhanced .gitignore** | Proper exclusion of build artifacts and sensitive files |
+
+### 🚀 Extensibility & New Features
+
+| Improvement | Description |
+|-------------|-------------|
+| **Optional AI Integration** | "Test with AI" button for direct prompt testing (using secure third-party APIs) |
+| **Plugin System** | Allow custom template packs and community extensions |
+| **Cloud Sync** | Optional encrypted cloud backup for cross-device sync |
+| **API Mode** | Expose extension features for automation and integrations |
+
+> 💡 **Note**: The extension currently works 100% offline by design. AI features will always be optional and privacy-respecting.
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Here's how you can help:
