@@ -1,161 +1,284 @@
-# AndalusAI - Prompt
-
 <div align="center">
 
-🤖 **Your Intelligent AI Prompt Assistant**
+# 🤖 AndalusAI - Prompt
 
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=googlechrome&logoColor=white)](https://chrome.google.com)
-[![Version](https://img.shields.io/badge/Version-1.0.0-green)](https://github.com)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+### Your Intelligent AI Prompt Engineering Assistant
 
-</div>
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chrome.google.com)
+[![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen?style=for-the-badge)](https://github.com)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](http://makeapullrequest.com)
+
+**A powerful Chrome extension to create, manage, and improve AI prompts with full Arabic (RTL) support**
+
+[Features](#-features) • [Installation](#-installation) • [Usage](#-how-to-use) • [Contributing](#-contributing)
 
 ---
 
-## 📖 Description
+</div>
 
-**AndalusAI - Prompt** is a powerful Chrome extension to help you create, manage, and improve AI prompts. It fully supports both English and Arabic (RTL).
+## 📖 About
+
+**AndalusAI - Prompt** is a feature-rich Chrome extension designed to supercharge your AI prompt engineering workflow. Whether you're a developer, content creator, or AI enthusiast, this tool helps you craft better prompts with smart templates, auto-improvement suggestions, and quality analysis.
+
+### 🌟 Why AndalusAI?
+
+- **Save Time**: Pre-built templates for common use cases
+- **Improve Quality**: AI-powered prompt enhancement
+- **Stay Organized**: History tracking and favorites system
+- **Work in Arabic**: Full RTL support for Arabic users
+
+---
 
 ## ✨ Features
 
-- 🎨 **Modern Dark UI** with attractive design
-- 🌍 **Full Arabic Support** (RTL)
-- 📝 **Ready-to-use Template Library** with various categories
-- ✨ **Auto-improve Prompts** with smart suggestions
-- 📊 **Prompt Quality Analysis** with improvement tips
-- ⭐ **Favorites List** for quick access
-- 📋 **Usage History** tracking
-- 💾 **Export & Import** your data
-- ⌨️ **Keyboard Shortcuts** for power users
+<table>
+<tr>
+<td width="50%">
+
+### 🎨 Modern Interface
+- Beautiful dark theme UI
+- Responsive and intuitive design
+- Smooth animations and transitions
+
+### 🌍 Multilingual Support
+- Full Arabic (RTL) support
+- English interface available
+- Easy language switching
+
+</td>
+<td width="50%">
+
+### 📝 Smart Templates
+- Ready-to-use prompt library
+- Multiple categories (Coding, Writing, Analysis...)
+- Customizable templates
+
+### ⚡ Productivity Tools
+- One-click prompt improvement
+- Quality analysis with tips
+- Keyboard shortcuts support
+
+</td>
+</tr>
+</table>
+
+### Full Feature List
+
+| Feature | Description |
+|---------|-------------|
+| 🎨 **Dark UI** | Modern, eye-friendly dark theme |
+| 🌍 **Arabic Support** | Full RTL layout for Arabic |
+| � **Template Library** | Pre-built prompts by category |
+| ✨ **Auto-Improve** | AI-powered prompt enhancement |
+| 📊 **Quality Analysis** | Prompt scoring with improvement tips |
+| ⭐ **Favorites** | Quick access to your best prompts |
+| 📋 **History** | Track all your created prompts |
+| 💾 **Export/Import** | Backup and restore your data |
+| ⌨️ **Shortcuts** | Keyboard shortcuts for power users |
+
+---
 
 ## 🚀 Installation
 
-### Chrome
+### Chrome (Recommended)
 
-1. Open `chrome://extensions/`
-2. Enable **Developer mode** in the top right corner
-3. Click **Load unpacked**
-4. Select the `prompt-engineering-assistant` folder
+```bash
+1. Download or clone this repository
+2. Open chrome://extensions/ in Chrome
+3. Enable "Developer mode" (top right toggle)
+4. Click "Load unpacked"
+5. Select the prompt-engineering-assistant folder
+```
 
 ### Firefox
 
-1. Open `about:debugging#/runtime/this-firefox`
-2. Click **Load Temporary Add-on**
-3. Select the `manifest.json` file
+```bash
+1. Open about:debugging#/runtime/this-firefox
+2. Click "Load Temporary Add-on"
+3. Select the manifest.json file
+```
+
+---
 
 ## 📁 Project Structure
 
 ```
 prompt-engineering-assistant/
-├── manifest.json          # Extension configuration
-├── background.js          # Background service worker
-├── content.js             # Content script
-├── package.json           # Project info
-├── popup/
-│   ├── index.html         # Popup UI
-│   ├── style.css          # Popup styles
-│   └── script.js          # Popup logic
-├── options/
-│   ├── index.html         # Settings page
-│   ├── style.css          # Settings styles
-│   └── script.js          # Settings logic
-├── lib/
-│   ├── utils.js           # Utility functions
-│   ├── language-support.js # Language support
-│   └── prompts-library.js # Prompts library
-└── icons/
+├── 📄 manifest.json          # Extension configuration
+├── 📄 background.js          # Background service worker
+├── 📄 content.js             # Content script for web pages
+├── 📄 package.json           # Project metadata
+│
+├── 📂 popup/                 # Extension popup UI
+│   ├── index.html           # Popup structure
+│   ├── style.css            # Popup styling
+│   └── script.js            # Popup functionality
+│
+├── 📂 options/               # Settings page
+│   ├── index.html           # Settings structure
+│   ├── style.css            # Settings styling
+│   └── script.js            # Settings functionality
+│
+├── 📂 lib/                   # Shared libraries
+│   ├── utils.js             # Utility functions
+│   ├── language-support.js  # i18n support
+│   └── prompts-library.js   # Template definitions
+│
+└── 📂 icons/                 # Extension icons
     ├── icon16.png
     ├── icon48.png
     └── icon128.png
 ```
 
-## ⌨️ Keyboard Shortcuts
+---
+
+## 🎯 How to Use
+
+### Context Menu (Right-Click)
+
+1. **Select text** on any webpage
+2. **Right-click** to open context menu
+3. Choose from **AndalusAI** options:
+   - ✨ **Improve Prompt** - Enhance selected text
+   - 📋 **Copy as Prompt** - Format and copy
+   - 📊 **Analyze Prompt** - Get quality insights
+
+### Popup Interface
+
+1. Click the **AndalusAI icon** in your toolbar
+2. **Type your prompt** or select a template
+3. Use the action buttons:
+   - 📋 Copy to clipboard
+   - ✨ Improve with AI
+   - 🗑️ Clear input
+
+### Keyboard Shortcuts
 
 | Shortcut | Action |
 |----------|--------|
 | `Ctrl+Shift+P` | Open quick prompt dialog |
-| `Escape` | Close open dialog |
-| `Ctrl+Enter` | Insert prompt (in quick dialog) |
+| `Escape` | Close dialog |
+| `Ctrl+Enter` | Insert prompt |
 
-## 🎯 How to Use
+---
 
-### Context Menus (Right-click)
+## ⚙️ Settings
 
-1. **Select text** on any web page
-2. **Right-click** to open context menu
-3. Choose from **AndalusAI** menu:
-   - ✨ Improve Prompt
-   - 📋 Copy as Prompt
-   - 📊 Analyze Prompt
+Access settings by clicking the ⚙️ icon in the popup:
 
-### Popup Window
+| Setting | Options |
+|---------|---------|
+| **Language** | English / العربية |
+| **Theme** | Dark / Light |
+| **Auto-save** | Enable / Disable |
+| **Notifications** | Enable / Disable |
 
-1. Click the extension icon
-2. Type your prompt or choose from templates
-3. Use buttons to copy or improve
+---
 
-## 🔧 Settings
+## 📦 Data Management
 
-- **Language**: English / Arabic
-- **Theme**: Dark / Light
-- **Auto-save**: Enable/Disable
-- **Notifications**: Enable/Disable
+### Export Your Data
+Save all your templates, favorites, and history as a JSON file.
 
-## 📦 Export & Import
+### Import Data
+Restore your data on any device by importing your backup file.
 
-You can export all your data (templates, favorites, history) as a JSON file and import it later on any device.
-
-## 🛠️ Development
-
-```bash
-# No npm install required - works directly
-# Just load the extension in your browser
-```
-
-### Testing
-
-1. Open `chrome://extensions/`
-2. Enable **Developer mode**
-3. Click **Load unpacked**
-4. Select the project folder
-5. Open Console (F12) to check for errors
-
-### Debugging
-
-- **Background script**: Click "service worker" link in extensions page
-- **Content script**: Open any webpage and check Console
-- **Popup**: Right-click extension icon → Inspect popup
+---
 
 ## 📝 Template Categories
 
-| Category | Description |
-|----------|-------------|
-| General | General purpose prompts |
-| Coding | Programming and development |
-| Writing | Content creation and editing |
-| Analysis | Text and data analysis |
-| Creative | Creative writing and ideas |
-| Translation | Language translation |
-| Education | Learning and teaching |
-| Business | Professional and business |
+| Category | Description | Use Cases |
+|----------|-------------|-----------|
+| 🌐 **General** | Multi-purpose prompts | Everyday tasks |
+| 💻 **Coding** | Programming assistance | Code review, debugging |
+| ✍️ **Writing** | Content creation | Articles, emails, copy |
+| 📊 **Analysis** | Data & text analysis | Reports, summaries |
+| 🎨 **Creative** | Creative writing | Stories, ideas, brainstorming |
+| 🌍 **Translation** | Language translation | Multi-language content |
+| 📚 **Education** | Learning & teaching | Explanations, tutorials |
+| 💼 **Business** | Professional use | Proposals, strategies |
 
-## 🔒 Permissions
+---
 
-- `storage` - Save your templates and settings
-- `activeTab` - Access the current tab
-- `contextMenus` - Add right-click menu options
-- `clipboardWrite/Read` - Copy and paste prompts
+## 🔒 Permissions Explained
+
+| Permission | Purpose |
+|------------|---------|
+| `storage` | Save your templates, favorites, and settings locally |
+| `activeTab` | Access current tab for prompt insertion |
+| `contextMenus` | Add right-click menu options |
+| `clipboardWrite/Read` | Copy prompts to clipboard |
+
+> ⚠️ **Privacy Note**: All data is stored locally on your device. No data is sent to external servers.
+
+---
+
+## 🛠️ Development
+
+### Prerequisites
+- Chrome or Firefox browser
+- Basic knowledge of browser extensions
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/AndalusAI-Prompt.git
+
+# Navigate to the directory
+cd AndalusAI-Prompt
+
+# Load in Chrome (no build required!)
+# Just follow the installation steps above
+```
+
+### Debugging
+
+| Component | How to Debug |
+|-----------|-------------|
+| **Background Script** | Click "service worker" in chrome://extensions |
+| **Content Script** | Open DevTools (F12) on any webpage |
+| **Popup** | Right-click extension icon → Inspect popup |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
+
+### Ideas for Contribution
+
+- [ ] Add more prompt templates
+- [ ] Improve Arabic translations
+- [ ] Add support for more languages
+- [ ] Create browser sync feature
+- [ ] Add dark/light theme toggle
+
+---
 
 ## 📄 License
 
-MIT License - Feel free to use, modify, and distribute.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by AndalusAI**
+### ⭐ Star this repo if you find it useful!
 
-[Report Bug](../../issues) · [Request Feature](../../issues)
+**Made with ❤️ by AndalusAI Team**
+
+[🐛 Report Bug](../../issues) • [💡 Request Feature](../../issues) • [📧 Contact](mailto:contact@andalusai.com)
+
+---
+
+<sub>© 2024 AndalusAI. All rights reserved.</sub>
 
 </div>
